@@ -575,6 +575,7 @@ config PN544
 	help
 	  NXP PN544 Near Field Communication controller support.
 
+<<<<<<< HEAD
 config CUSTOM_VOLTAGE
        bool "Support for Custom Voltage"
        default y
@@ -599,5 +600,11 @@ config TOUCH_WAKE
        default y
        help
          Say Y here to enable Touch Wake
+
+config LIVE_OC
+       bool "Support for Live OC"
+       default y
+       help
+         Say Y here to enable Live OC
 
 endif # MISC_DEVICES
