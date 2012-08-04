@@ -575,7 +575,6 @@ config PN544
 	help
 	  NXP PN544 Near Field Communication controller support.
 
-<<<<<<< HEAD
 config CUSTOM_VOLTAGE
        bool "Support for Custom Voltage"
        default y

@@ -654,6 +654,7 @@ void liveoc_update(unsigned int oc_value)
     return;
 }
 EXPORT_SYMBOL(liveoc_update);
+#endif
 
 #ifdef CONFIG_CUSTOM_VOLTAGE
 static const int num_freqs = sizeof(dvs_conf) / sizeof(struct s5pv210_dvs_conf);
