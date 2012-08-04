@@ -635,7 +635,6 @@ void customvoltage_freqvolt(unsigned long * freqs, unsigned long * arm_voltages,
     return;
 }
 EXPORT_SYMBOL(customvoltage_freqvolt);
-#endif
 
 #ifdef CONFIG_LIVE_OC
 static int find_divider(int freq)
