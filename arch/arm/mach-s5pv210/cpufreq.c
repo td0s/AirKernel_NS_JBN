@@ -626,7 +626,6 @@ EXPORT_SYMBOL(customvoltage_freqvolt);
 static int __init s5pv210_cpu_init(struct cpufreq_policy *policy)
 {
 	unsigned long mem_type;
-	int ret;
 
 	cpu_clk = clk_get(NULL, "armclk");
 	if (IS_ERR(cpu_clk))
@@ -671,13 +670,6 @@ static int __init s5pv210_cpu_init(struct cpufreq_policy *policy)
 	cpufreq_frequency_table_get_attr(s5pv210_freq_table, policy->cpu);
 
 	policy->cpuinfo.transition_latency = 40000;
-
-	ret = cpufreq_frequency_table_cpuinfo(policy, s5pv210_freq_table);
-    
-	if (!ret)
-	    policy->max = 1000000;
-    
-	return ret;
 
 	return cpufreq_frequency_table_cpuinfo(policy, s5pv210_freq_table);
 }
